@@ -91,8 +91,8 @@ variable "tags" {
   description = "Custom tags to provide to all resources that accept tags."
   type        = map(string)
   default = {
-    "Service" = local.service_name,
-    "Stage"   = local.stage
+    #"Service" = local.service_name,
+    #"Stage"   = local.stage
   }
 }
 
