@@ -111,7 +111,7 @@ locals {
   iam_partition       = var.iam_partition
   account_id          = data.aws_caller_identity.current.account_id
   iam_account_id      = var.iam_account_id != "" ? var.iam_account_id : data.aws_caller_identity.current.account_id
-  region              = var.region != "" ? var.region : data.aws_region.current.name
+  region              = var.region != "" ? var.region : data.aws_region.current.region
   iam_region          = var.iam_region
   stage               = var.stage
   iam_stage           = var.iam_stage != "" ? var.iam_stage : var.stage
