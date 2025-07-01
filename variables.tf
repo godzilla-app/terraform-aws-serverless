@@ -123,8 +123,10 @@ locals {
   role_ci_name        = var.role_ci_name
   opt_many_lambdas    = var.opt_many_lambdas
   opt_disable_groups  = var.opt_disable_groups
-
-  tags = var.tags
+  tags = {
+    "Service" = local.service_name
+    "Stage"   = local.stage
+  }
 }
 
 # Capture repeated/complicated AWS IAM resources to a single location.
